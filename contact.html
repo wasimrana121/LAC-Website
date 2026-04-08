@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — LA Consulting Corp</title>
+  <meta name="description" content="Get in touch with LA Consulting Corp. Message us on WhatsApp, send an email, or fill out the contact form to book a free discovery call." />
+  <link rel="canonical" href="https://laconsultingcorp.com/contact.html" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <polygon points="18,3 35,33 1,33" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linejoin="round"/>
+        <polygon points="18,11 29,33 7,33" fill="#2563EB" opacity="0.35"/>
+        <polygon points="18,19 24,33 12,33" fill="#2563EB" opacity="0.85"/>
+      </svg>
+      <span>LAConsultingCorp</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="privacy-policy.html">Privacy</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://wa.me/12039536490" target="_blank" rel="noopener" class="btn btn-whatsapp">
+        <span class="wa-icon">💬</span> WhatsApp Us
+      </a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+  <a href="privacy-policy.html">Privacy</a>
+  <div class="nav-mobile-cta">
+    <a href="https://wa.me/12039536490" target="_blank" rel="noopener" class="btn btn-whatsapp btn-full">💬 WhatsApp Us</a>
+    <a href="contact.html" class="btn btn-outline btn-full">Send a Message</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <span class="section-eyebrow">Contact Us</span>
+      <h1 class="hero-reveal">Let's Start a<br /><span class="gradient-text">Real Conversation.</span></h1>
+      <p>Book a free 30-minute discovery call via WhatsApp, or send us a message below. We respond to every inquiry within 24 hours — and we'll tell you honestly if we're the right fit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT GRID -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- FORM -->
+      <div class="fade-up">
+        <h2 style="font-size:1.5rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.5rem;">Send us a message</h2>
+        <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:2rem;">We'll get back to you within 24 hours on business days.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="contact-name">Full Name *</label>
+            <input type="text" id="contact-name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Work Email *</label>
+            <input type="email" id="contact-email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-company">Company / Organization</label>
+            <input type="text" id="contact-company" name="company" placeholder="Acme Corp" />
+          </div>
+          <div class="form-group">
+            <label for="contact-service">Which service are you interested in?</label>
+            <select id="contact-service" name="service">
+              <option value="" disabled selected>Select an option…</option>
+              <option value="audit">AI Opportunity Audit</option>
+              <option value="sprint">Workflow Automation Sprint</option>
+              <option value="leadership">Executive Thought Leadership System</option>
+              <option value="sap">SAP Services</option>
+              <option value="analytics">Data Analytics &amp; Visualization</option>
+              <option value="other">Not sure yet — exploring options</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Tell us about your situation *</label>
+            <textarea id="contact-message" name="message" placeholder="Briefly describe the business problem or goal you're hoping to address…" required></textarea>
+          </div>
+          <div class="form-group form-consent">
+            <input type="checkbox" id="terms-consent" name="terms" required />
+            <label for="terms-consent">
+              I have read and agree to the
+              <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+              and
+              <a href="privacy-policy.html" target="_blank">Terms &amp; Conditions</a>.
+              By submitting this form, I consent to be contacted by LA Consulting Corp by email or phone.
+            </label>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary btn-full btn-lg" id="contact-submit-btn">Send Message →</button>
+          </div>
+          <div id="form-message" class="form-message" style="display:none;"></div>
+        </form>
+      </div>
+
+      <!-- INFO CARDS -->
+      <div class="fade-up delay-2">
+
+        <!-- WhatsApp Card (prominent) -->
+        <div class="wa-card" style="margin-bottom:1.5rem;">
+          <h3>💬 Fastest Response: WhatsApp</h3>
+          <p>Message us directly on WhatsApp for same-day replies and to book your free discovery call instantly.</p>
+          <a href="https://wa.me/12039536490?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20call%20with%20LAC" target="_blank" rel="noopener" class="btn btn-whatsapp btn-full btn-lg" id="contact-whatsapp-btn">
+            <span class="wa-icon">💬</span> Chat on WhatsApp — +1 (203) 953-6490
+          </a>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>Contact Information</h3>
+          <div class="ci-item">
+            <div class="ci-icon">📧</div>
+            <div>
+              <div class="ci-label">Email</div>
+              <div class="ci-value"><a href="mailto:info@laconsultingcorp.com" style="color:var(--primary);">info@laconsultingcorp.com</a></div>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">💬</div>
+            <div>
+              <div class="ci-label">WhatsApp</div>
+              <div class="ci-value"><a href="https://wa.me/12039536490" target="_blank" rel="noopener" style="color:var(--primary);">+1 (203) 953-6490</a></div>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">🕐</div>
+            <div>
+              <div class="ci-label">Office Hours</div>
+              <div class="ci-value">Monday – Saturday: 8:00 AM – 9:00 PM EST</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info-card" style="margin-top:1.5rem;">
+          <h3>Our Offices</h3>
+          <div class="ci-item">
+            <div class="ci-icon">🇺🇸</div>
+            <div>
+              <div class="ci-label">USA (Headquarters)</div>
+              <div class="ci-value">31-33 Hillhouse Ave, 3rd Floor<br />Bridgeport, CT 06606</div>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">🇵🇰</div>
+            <div>
+              <div class="ci-label">Pakistan (Delivery Office)</div>
+              <div class="ci-value">Karachi, Pakistan<br />LA Consulting SMC-Private Ltd</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCOVERY CALL EXPLAINER -->
+<section class="section-sm" style="background: linear-gradient(180deg, transparent, rgba(37,99,235,0.04), transparent);">
+  <div class="container" style="max-width:860px;">
+    <div class="section-header centered fade-up">
+      <span class="section-eyebrow">What to Expect</span>
+      <h2 class="section-title">What happens on a discovery call?</h2>
+    </div>
+    <div class="pain-grid fade-up">
+      <div class="pain-card" style="text-align:center;">
+        <div class="pain-icon" style="margin: 0 auto 1.25rem;">🎯</div>
+        <h3>We Listen First</h3>
+        <p>We'll ask about your business model, current challenges, team structure, and goals — before suggesting anything.</p>
+      </div>
+      <div class="pain-card" style="text-align:center;">
+        <div class="pain-icon" style="margin: 0 auto 1.25rem;">💡</div>
+        <h3>We Give You a Clear Picture</h3>
+        <p>Based on what we learn, we'll tell you exactly where we can add value — and which of our offers (if any) is the right fit.</p>
+      </div>
+      <div class="pain-card" style="text-align:center;">
+        <div class="pain-icon" style="margin: 0 auto 1.25rem;">🤝</div>
+        <h3>You Decide, No Pressure</h3>
+        <p>There's no sales pressure. If we're not the right partner, we'll say so. We'd rather you move forward with confidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+            <polygon points="18,3 35,33 1,33" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linejoin="round"/>
+            <polygon points="18,11 29,33 7,33" fill="#2563EB" opacity="0.35"/>
+            <polygon points="18,19 24,33 12,33" fill="#2563EB" opacity="0.85"/>
+          </svg>
+          <span>LAConsultingCorp</span>
+        </a>
+        <p>Strategic AI consulting, workflow automation, and executive thought leadership for mid-market leaders who are serious about results.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+          <a href="https://linkedin.com/company/laconsultingcorp" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#audit">AI Opportunity Audit</a></li>
+          <li><a href="services.html#sprint">Workflow Automation Sprint</a></li>
+          <li><a href="services.html#leadership">Executive Thought Leadership</a></li>
+          <li><a href="services.html">SAP Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><span>📧</span><a href="mailto:info@laconsultingcorp.com" style="color:var(--text-muted);">info@laconsultingcorp.com</a></li>
+          <li><span>💬</span><a href="https://wa.me/12039536490" target="_blank" rel="noopener" style="color:var(--text-muted);">+1 (203) 953-6490</a></li>
+          <li><span>📍</span>31-33 Hillhouse Ave, 3rd Fl, Bridgeport, CT 06606, USA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 LA Consulting Corporation. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/12039536490" class="floating-wa-btn" target="_blank" rel="noopener" aria-label="Chat with Us on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.012 0c-6.627 0-12 5.373-12 12 0 2.623.837 5.048 2.25 7.02L.45 24l5.122-1.782A11.95 11.95 0 0 0 12.012 24c6.627 0 12-5.373 12-12s-5.373-12-12-12zm6.208 17.202c-.266.75-1.554 1.455-2.158 1.503-.553.045-1.284.148-3.64-1.21-2.825-1.63-4.63-4.52-4.767-4.707-.138-.184-1.134-1.505-1.134-2.872 0-1.365.707-2.036.963-2.312.255-.276.552-.345.736-.345.184 0 .368.005.52.12.164.015.378-.01.58.48.21.5.71 1.737.773 1.861.063.125.105.27.02.455-.084.184-.13.3-.255.454-.125.15-.262.33-.377.456-.126.126-.264.267-.116.518.147.252.65 1.074 1.396 1.74 1.018.91 1.82 1.18 2.062 1.304.242.124.384.103.528-.06.143-.162.61-1.073.77-1.442.162-.367.32-.307.674-.182.353.125 2.215 1.043 2.593 1.232.378.188.63.276.72.43.088.15.088.887-.18 1.637z"/>
+  </svg>
+  Chat with Us
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
