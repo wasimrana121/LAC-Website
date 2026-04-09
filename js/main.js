@@ -1,3 +1,73 @@
+// === CURSOR ANIMATION ===
+(function() {
+  const glow = document.getElementById('cursor-glow');
+  const dot  = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  if (!glow || !dot || !ring) return;
+
+  let mouseX = 0, mouseY = 0;
+  let glowX = 0, glowY = 0;
+  let dotX = 0, dotY = 0;
+  let ringX = 0, ringY = 0;
+  let rafId;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  function tick() {
+    // Glow: very lazy follow
+    glowX = lerp(glowX, mouseX, 0.06);
+    glowY = lerp(glowY, mouseY, 0.06);
+    glow.style.left = glowX + 'px';
+    glow.style.top  = glowY + 'px';
+
+    // Dot: fast precise
+    dotX = lerp(dotX, mouseX, 0.55);
+    dotY = lerp(dotY, mouseY, 0.55);
+    dot.style.left = dotX + 'px';
+    dot.style.top  = dotY + 'px';
+
+    // Ring: medium lag
+    ringX = lerp(ringX, mouseX, 0.14);
+    ringY = lerp(ringY, mouseY, 0.14);
+    ring.style.left = ringX + 'px';
+    ring.style.top  = ringY + 'px';
+
+    rafId = requestAnimationFrame(tick);
+  }
+  tick();
+
+  // Expand ring on interactive elements
+  document.querySelectorAll('a, button, [role="button"], input, textarea, select, label[for]').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      ring.style.width  = '58px';
+      ring.style.height = '58px';
+      ring.style.borderColor = 'rgba(37,99,235,0.7)';
+      dot.style.opacity = '0.3';
+    });
+    el.addEventListener('mouseleave', () => {
+      ring.style.width  = '38px';
+      ring.style.height = '38px';
+      ring.style.borderColor = 'rgba(37,99,235,0.45)';
+      dot.style.opacity = '1';
+    });
+  });
+
+  // Hide on mouse leave / show on enter
+  document.addEventListener('mouseleave', () => {
+    dot.style.opacity = '0';
+    ring.style.opacity = '0';
+  });
+  document.addEventListener('mouseenter', () => {
+    dot.style.opacity = '1';
+    ring.style.opacity = '1';
+  });
+})();
+
 // === NAVBAR SCROLL ===
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {

@@ -13,6 +13,8 @@
   <meta property="og:url" content="https://laconsultingcorp.com/" />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="css/main.css" />
+  <!-- Calendly widget CSS -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <style>
     /* Hero override — light theme uses CSS gradient; no dark overlay */
     .hero-grid-overlay { z-index: 0; }
@@ -40,8 +42,8 @@
       <a href="privacy-policy.html">Privacy</a>
     </div>
     <div class="nav-right">
-      <a href="https://wa.me/12039536490" target="_blank" rel="noopener" class="btn btn-whatsapp" id="nav-wa-btn">
-        <span class="wa-icon">💬</span> WhatsApp Us
+      <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/laconsultingcorp'});return false;" class="btn btn-calendly" id="nav-cal-btn">
+        <span class="cal-icon">📅</span> Book a Call
       </a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
@@ -56,6 +58,7 @@
   <a href="contact.html">Contact</a>
   <a href="privacy-policy.html">Privacy</a>
   <div class="nav-mobile-cta">
+    <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/laconsultingcorp'});return false;" class="btn btn-calendly btn-full">📅 Book a Call</a>
     <a href="https://wa.me/12039536490" target="_blank" rel="noopener" class="btn btn-whatsapp btn-full">💬 WhatsApp Us</a>
     <a href="contact.html" class="btn btn-outline btn-full">Send a Message</a>
   </div>
@@ -76,8 +79,11 @@
         Strategic AI consulting, workflow automation, and executive positioning — built for decision-makers who need measurable outcomes, not another tool recommendation.
       </p>
       <div class="hero-actions">
+        <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/laconsultingcorp'});return false;" class="btn btn-calendly btn-lg" id="hero-cal-btn">
+          <span class="cal-icon">📅</span> Book a Free Call
+        </a>
         <a href="https://wa.me/12039536490" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg" id="hero-wa-btn">
-          <span class="wa-icon">💬</span> Book a Free Call
+          <span class="wa-icon">💬</span> WhatsApp Us
         </a>
         <a href="services.html" class="btn btn-outline btn-lg" id="hero-services-btn">See Our Offers →</a>
       </div>
@@ -406,8 +412,11 @@
       <h2>Ready to cut the noise<br />and <span class="gradient-text">get results?</span></h2>
       <p>Book a free 30-minute discovery call. We'll identify your highest-leverage opportunity and tell you exactly which engagement fits — or whether you even need us.</p>
       <div class="cta-actions">
-        <a href="https://wa.me/12039536490?text=Hi%2C%20I%27d%20like%20to%20book%20a%20discovery%20call%20with%20LAC" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg" id="cta-wa-btn">
-          <span class="wa-icon">💬</span> WhatsApp to Book a Call
+        <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/laconsultingcorp'});return false;" class="btn btn-calendly btn-lg" id="cta-cal-btn">
+          <span class="cal-icon">📅</span> Book a Free Discovery Call
+        </a>
+        <a href="https://wa.me/12039536490" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg" id="cta-wa-btn">
+          <span class="wa-icon">💬</span> WhatsApp Us
         </a>
         <a href="contact.html" class="btn btn-outline btn-lg" id="cta-contact-btn">Send a Message</a>
       </div>
@@ -483,6 +492,13 @@
   Chat with Us
 </a>
 
+<!-- === CURSOR ANIMATION ELEMENTS === -->
+<div id="cursor-glow"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
 <script src="js/main.js"></script>
+<!-- Calendly popup widget JS -->
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>

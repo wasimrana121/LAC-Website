@@ -7,6 +7,8 @@
   <meta name="description" content="Get in touch with LA Consulting Corporation. Message us on WhatsApp, send an email, or fill out the contact form to book a free discovery call." />
   <link rel="canonical" href="https://laconsultingcorp.com/contact.html" />
   <link rel="stylesheet" href="css/main.css" />
+  <!-- Calendly widget CSS -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -29,8 +31,8 @@
       <a href="privacy-policy.html">Privacy</a>
     </div>
     <div class="nav-right">
-      <a href="https://wa.me/12039536490" target="_blank" rel="noopener" class="btn btn-whatsapp">
-        <span class="wa-icon">💬</span> WhatsApp Us
+      <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/laconsultingcorp'});return false;" class="btn btn-calendly">
+        <span class="cal-icon">📅</span> Book a Call
       </a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
@@ -45,6 +47,7 @@
   <a href="contact.html">Contact</a>
   <a href="privacy-policy.html">Privacy</a>
   <div class="nav-mobile-cta">
+    <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/laconsultingcorp'});return false;" class="btn btn-calendly btn-full">📅 Book a Call</a>
     <a href="https://wa.me/12039536490" target="_blank" rel="noopener" class="btn btn-whatsapp btn-full">💬 WhatsApp Us</a>
     <a href="contact.html" class="btn btn-outline btn-full">Send a Message</a>
   </div>
@@ -120,10 +123,20 @@
       <!-- INFO CARDS -->
       <div class="fade-up delay-2">
 
-        <!-- WhatsApp Card (prominent) -->
+        <!-- Calendly Card (most prominent) -->
+        <div class="wa-card" style="margin-bottom:1.5rem;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.2);">
+          <h3>📅 Book a Free Discovery Call</h3>
+          <p>Schedule a free 30-minute call directly on our calendar — pick a time that works for you, no back-and-forth.</p>
+          <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/laconsultingcorp'});return false;" class="btn btn-calendly btn-full btn-lg" id="contact-calendly-btn">
+            <span class="cal-icon">📅</span> Book on Our Calendar
+          </a>
+        </div>
+
+        <!-- WhatsApp Card -->
         <div class="wa-card" style="margin-bottom:1.5rem;">
-          <h3>💬 Fastest Response: WhatsApp</h3>
-          <p>Message us directly on WhatsApp for same-day replies and to book your free discovery call instantly.</p>
+          <h3>💬 Prefer WhatsApp? Message Us</h3>
+          <p>Message us directly on WhatsApp for same-day replies. We respond to every inquiry within a few hours.
+          </p>
           <a href="https://wa.me/12039536490?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20call%20with%20LAC" target="_blank" rel="noopener" class="btn btn-whatsapp btn-full btn-lg" id="contact-whatsapp-btn">
             <span class="wa-icon">💬</span> Chat on WhatsApp — +1 (203) 953-6490
           </a>
@@ -271,5 +284,7 @@
 </a>
 
 <script src="js/main.js"></script>
+<!-- Calendly popup widget JS -->
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>
