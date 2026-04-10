@@ -188,13 +188,18 @@
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/12039536490" class="floating-wa-btn" target="_blank" rel="noopener" aria-label="Chat with Us on WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12.012 0c-6.627 0-12 5.373-12 12 0 2.623.837 5.048 2.25 7.02L.45 24l5.122-1.782A11.95 11.95 0 0 0 12.012 24c6.627 0 12-5.373 12-12s-5.373-12-12-12zm6.208 17.202c-.266.75-1.554 1.455-2.158 1.503-.553.045-1.284.148-3.64-1.21-2.825-1.63-4.63-4.52-4.767-4.707-.138-.184-1.134-1.505-1.134-2.872 0-1.365.707-2.036.963-2.312.255-.276.552-.345.736-.345.184 0 .368.005.52.12.164.015.378-.01.58.48.21.5.71 1.737.773 1.861.063.125.105.27.02.455-.084.184-.13.3-.255.454-.125.15-.262.33-.377.456-.126.126-.264.267-.116.518.147.252.65 1.074 1.396 1.74 1.018.91 1.82 1.18 2.062 1.304.242.124.384.103.528-.06.143-.162.61-1.073.77-1.442.162-.367.32-.307.674-.182.353.125 2.215 1.043 2.593 1.232.378.188.63.276.72.43.088.15.088.887-.18 1.637z"/>
-  </svg>
-  Chat with Us
-</a>
+<!-- n8n Chat Widget -->
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  createChat({
+    webhookUrl: 'https://n8n.laconsultingcorp.com/webhook/786418b5-4b9c-4db1-a3a5-aaf5b8e75823/chat',
+    mode: 'window',
+    theme: {
+      color: { primary: '#2563EB', accent: '#4F46E5' }
+    }
+  });
+</script>
 
 <script src="js/main.js"></script>
 <!-- Calendly popup widget JS -->
