@@ -273,7 +273,19 @@
   import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
   createChat({
     webhookUrl: 'https://n8n.laconsultingcorp.com/webhook/786418b5-4b9c-4db1-a3a5-aaf5b8e75823/chat',
-    mode: 'window'
+    mode: 'window',
+    initialMessages: [
+      "Hi! I'm the LAC AI Assistant. How can I help you automate your business today?"
+    ],
+    i18n: {
+      en: {
+        title: 'Check how AI can help your business',
+        subtitle: "Start a chat. We're here at LAC to help you 24/7.",
+      }
+    },
+    theme: {
+      color: { primary: '#2563EB', accent: '#4F46E5' }
+    }
   });
 </script>
 <div id="chat-tooltip" class="chat-tooltip">LAC AI Assistant</div>
