@@ -74,6 +74,17 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 20);
 });
 
+// Hide n8n Chat Tooltip When Clicked
+document.addEventListener('click', (e) => {
+  if (e.clientX > window.innerWidth - 120 && e.clientY > window.innerHeight - 120) {
+    const tooltip = document.getElementById('chat-tooltip');
+    if (tooltip) {
+      tooltip.style.opacity = '0';
+      setTimeout(() => tooltip.style.display = 'none', 300);
+    }
+  }
+});
+
 // === MOBILE HAMBURGER ===
 const hamburger = document.getElementById('nav-hamburger');
 const mobileNav = document.getElementById('nav-mobile');
